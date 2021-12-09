@@ -29,7 +29,7 @@ namespace Scrabble.Tests
       //Assert
       Assert.AreEqual(userWord, result);
     }
-    
+
     [TestMethod]
     public void GetScore_ScoreOfEmptyWord_Zero()
     {
@@ -37,6 +37,21 @@ namespace Scrabble.Tests
       string userWord = "";
       ScrabbleLetter testScrabble = new ScrabbleLetter(userWord);
       int expectedScore = 0;
+
+      //Act
+      int actualScore = testScrabble.GetScore();
+
+      //Assert
+      Assert.AreEqual(expectedScore, actualScore);
+    }
+    
+    [TestMethod]
+    public void GetScore_ScoreOfOneCharWord_IntScore()
+    {
+      //Arrange
+      string userWord = "e";
+      ScrabbleLetter testScrabble = new ScrabbleLetter(userWord);
+      int expectedScore = 1;
 
       //Act
       int actualScore = testScrabble.GetScore();
