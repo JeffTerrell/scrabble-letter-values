@@ -1,14 +1,21 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Scrabble.Models;
+using System.Collections.Generic;
+using System;
 
 namespace Scrabble.Tests
 {
   [TestClass]
 
-  public class ScrabbleLetterTests
+  public class ScrabbleLetterTests : IDisposable
   {
-    [TestMethod]
+    public void Dispose()
+    {
+      ScrabbleLetter.ClearAll();
+    }
 
+    [TestMethod]
+  
     public void ScrabbleLetter_CreateInstanceOfScrabbleLetter_Item()
     {
       ScrabbleLetter newWord = new ScrabbleLetter("test");
@@ -89,5 +96,34 @@ namespace Scrabble.Tests
       //Assert
       Assert.AreEqual(expectedScore, actualScore);
     }
+
+    [TestMethod]
+    public void ReturnWordsList_ReturnsEmptyList_ScrabbleList()
+    {
+      //Arrange
+      List<ScrabbleLetter> expectedList = new List<ScrabbleLetter> { };
+
+      // Act
+      List<ScrabbleLetter> resultList = ScrabbleLetter.ReturnWordsList();
+
+      //Assert
+
+      CollectionAssert.AreEqual(expectedList, resultList);
+    }
   }
 }
+
+/*
+Game starts
+1. Create a new, blank list
+X 2. Player enters word
+X 3. Create ScrabbleLetter from word
+4. Word added to list
+X 5. Display score for word
+6. Option to display total score
+7. Repeat from 2
+*/
+
+// - add word
+// - get whole list
+// - get whole score (from list)

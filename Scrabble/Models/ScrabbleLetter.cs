@@ -6,10 +6,29 @@ namespace Scrabble.Models
   public class ScrabbleLetter
   {
     public string Word { get; }
+    private static List<ScrabbleLetter> _wordsList = new List<ScrabbleLetter> {};
+
+    public static List<ScrabbleLetter> ReturnWordsList()
+    {
+      return _wordsList;
+    }
+    
+    public static void ClearAll()
+    {
+      _wordsList.Clear();
+    }
 
     public ScrabbleLetter(string word)
     {
       Word = word;
+      _wordsList.Add(this);
+    }
+
+    
+    public static int GetTotalScore()
+    {
+      //TODO
+      return -1;
     }
 
     public int GetScore()
@@ -51,6 +70,7 @@ namespace Scrabble.Models
       }
       return score;
     }
+
   }
 }
 
@@ -58,7 +78,6 @@ namespace Scrabble.Models
 // {
 //   Console.WriteLine(groceryItem);
 // }
-
 // A, E, I, O, U, L, N, R, S, T       1
 // D, G                               2
 // B, C, M, P                         3
