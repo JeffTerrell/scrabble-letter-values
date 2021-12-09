@@ -44,7 +44,7 @@ namespace Scrabble.Tests
       //Assert
       Assert.AreEqual(expectedScore, actualScore);
     }
-    
+
     [TestMethod]
     public void GetScore_ScoreOfOneCharWord_IntScore()
     {
@@ -59,7 +59,7 @@ namespace Scrabble.Tests
       //Assert
       Assert.AreEqual(expectedScore, actualScore);
     }
-    
+
     [TestMethod]
     public void GetScore_ScoreOfOneCharCapital_IntScore()
     {
@@ -67,6 +67,21 @@ namespace Scrabble.Tests
       string userWord = "E";
       ScrabbleLetter testScrabble = new ScrabbleLetter(userWord);
       int expectedScore = 1;
+
+      //Act
+      int actualScore = testScrabble.GetScore();
+
+      //Assert
+      Assert.AreEqual(expectedScore, actualScore);
+    }
+
+    [TestMethod]
+    public void GetScore_ScoreOfMultChars_IntScore()
+    {
+      //Arrange
+      string userWord = "Elbow";
+      ScrabbleLetter testScrabble = new ScrabbleLetter(userWord);
+      int expectedScore = 10;
 
       //Act
       int actualScore = testScrabble.GetScore();
