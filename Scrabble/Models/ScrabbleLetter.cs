@@ -15,7 +15,7 @@ namespace Scrabble.Models
     public int GetScore()
     {
       //TODO
-      return -1;
+      return 0;
     }
   }
 }
