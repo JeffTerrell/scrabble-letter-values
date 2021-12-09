@@ -59,5 +59,20 @@ namespace Scrabble.Tests
       //Assert
       Assert.AreEqual(expectedScore, actualScore);
     }
+    
+    [TestMethod]
+    public void GetScore_ScoreOfOneCharCapital_IntScore()
+    {
+      //Arrange
+      string userWord = "E";
+      ScrabbleLetter testScrabble = new ScrabbleLetter(userWord);
+      int expectedScore = 1;
+
+      //Act
+      int actualScore = testScrabble.GetScore();
+
+      //Assert
+      Assert.AreEqual(expectedScore, actualScore);
+    }
   }
 }
