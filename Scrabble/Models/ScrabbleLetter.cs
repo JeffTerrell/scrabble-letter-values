@@ -6,9 +6,16 @@ namespace Scrabble.Models
   public class ScrabbleLetter
   {
     public string Word { get; }
+
     public ScrabbleLetter(string word)
     {
       Word = word;
+    }
+
+    public int GetScore()
+    {
+      //TODO
+      return -1;
     }
   }
 }

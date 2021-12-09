@@ -22,11 +22,27 @@ namespace Scrabble.Tests
       //Arrange
       string userWord = "test";
       ScrabbleLetter newWord = new ScrabbleLetter(userWord);
+      
       //Act
       string result = newWord.Word;
 
       //Assert
       Assert.AreEqual(userWord, result);
+    }
+    
+    [TestMethod]
+    public void GetScore_ScoreOfEmptyWord_Zero()
+    {
+      //Arrange
+      string userWord = "";
+      ScrabbleLetter testScrabble = new ScrabbleLetter(userWord);
+      int expectedScore = 0;
+
+      //Act
+      int actualScore = testScrabble.GetScore();
+
+      //Assert
+      Assert.AreEqual(expectedScore, actualScore);
     }
   }
 }
