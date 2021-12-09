@@ -44,7 +44,7 @@ namespace Scrabble.Models
         {'z', 10}
       };
       int score = 0;
-      char[] wordInChars = Word.ToCharArray();
+      char[] wordInChars = Word.ToLower().ToCharArray();
       foreach (char letter in wordInChars)
       {
         score += letterValues[letter];
@@ -54,10 +54,10 @@ namespace Scrabble.Models
   }
 }
 
-    // foreach (string groceryItem in myGroceryList)
-    // {
-    //   Console.WriteLine(groceryItem);
-    // }
+// foreach (string groceryItem in myGroceryList)
+// {
+//   Console.WriteLine(groceryItem);
+// }
 
 // A, E, I, O, U, L, N, R, S, T       1
 // D, G                               2
