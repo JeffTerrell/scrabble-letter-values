@@ -14,8 +14,8 @@ namespace Scrabble.Models
 
     public int GetScore()
     {
-      Dictionary<char, int> letterValues = new Dictionary<char, int>() 
-      { 
+      Dictionary<char, int> letterValues = new Dictionary<char, int>()
+      {
         {'a', 1},
         {'e', 1},
         {'i', 1},
