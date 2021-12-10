@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TheDreamer\\desktop\\epicodus-projects\\week8\\Scrabble.Solution\\Scrabble\\Scrabble.csproj": {}
+    "C:\\Users\\TheDreamer\\Desktop\\epicodus-projects\\week8\\Scrabble.Solution\\Scrabble\\Scrabble.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TheDreamer\\desktop\\epicodus-projects\\week8\\Scrabble.Solution\\Scrabble\\Scrabble.csproj": {
+    "C:\\Users\\TheDreamer\\Desktop\\epicodus-projects\\week8\\Scrabble.Solution\\Scrabble\\Scrabble.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TheDreamer\\desktop\\epicodus-projects\\week8\\Scrabble.Solution\\Scrabble\\Scrabble.csproj",
+        "projectUniqueName": "C:\\Users\\TheDreamer\\Desktop\\epicodus-projects\\week8\\Scrabble.Solution\\Scrabble\\Scrabble.csproj",
         "projectName": "Scrabble",
-        "projectPath": "C:\\Users\\TheDreamer\\desktop\\epicodus-projects\\week8\\Scrabble.Solution\\Scrabble\\Scrabble.csproj",
+        "projectPath": "C:\\Users\\TheDreamer\\Desktop\\epicodus-projects\\week8\\Scrabble.Solution\\Scrabble\\Scrabble.csproj",
         "packagesPath": "C:\\Users\\TheDreamer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TheDreamer\\desktop\\epicodus-projects\\week8\\Scrabble.Solution\\Scrabble\\obj\\",
+        "outputPath": "C:\\Users\\TheDreamer\\Desktop\\epicodus-projects\\week8\\Scrabble.Solution\\Scrabble\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

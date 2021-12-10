@@ -7,10 +7,17 @@ namespace Scrabble.Models
   {
     public string Word { get; }
     private static List<ScrabbleLetter> _wordsList = new List<ScrabbleLetter> {};
+    // private static List<ScrabbleLetter> _scoreList = new List<ScrabbleLetter> {}; attempt to use second list for holding scores
+
     public static List<ScrabbleLetter> ReturnWordsList()
     {
       return _wordsList;
     }
+
+    // public static List<ScrabbleLetter> ReturnScoreList() attempt to use second list for holding scores
+    // {
+    //   return_scoreList;
+    // }
     
     public static void ClearAll()
     {
@@ -73,7 +80,6 @@ namespace Scrabble.Models
       }
       return score;
     }
-
   }
 }
 
