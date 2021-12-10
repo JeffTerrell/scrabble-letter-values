@@ -7,7 +7,6 @@ namespace Scrabble.Models
   {
     public string Word { get; }
     private static List<ScrabbleLetter> _wordsList = new List<ScrabbleLetter> {};
-
     public static List<ScrabbleLetter> ReturnWordsList()
     {
       return _wordsList;
@@ -27,8 +26,12 @@ namespace Scrabble.Models
     
     public static int GetTotalScore()
     {
-      //TODO
-      return -1;
+      int playerScore = 0;
+      foreach (ScrabbleLetter word in _wordsList)
+      {
+        playerScore += word.GetScore();
+      }
+      return playerScore;
     }
 
     public int GetScore()

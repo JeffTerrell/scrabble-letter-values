@@ -125,8 +125,23 @@ namespace Scrabble.Tests
       List<ScrabbleLetter> resultList = ScrabbleLetter.ReturnWordsList();
 
       //Assert
-
       CollectionAssert.AreEqual(expectedList, resultList);
+    }
+
+    [TestMethod]
+    public void GetTotalScore_ReturnTotalScore_PlayerScore()
+    {
+      //Arrange
+      string userWordOne = "Elbow";
+      string userWordTwo = "Hello";
+      ScrabbleLetter testScrabbleOne = new ScrabbleLetter(userWordOne);
+      ScrabbleLetter testScrabbleTwo = new ScrabbleLetter(userWordTwo);
+      int expectedScore = 18;
+      //Act
+      int actualScore = ScrabbleLetter.GetTotalScore();
+
+      //Assert
+      Assert.AreEqual(expectedScore, actualScore);
     }
   }
 }
