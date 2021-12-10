@@ -110,6 +110,24 @@ namespace Scrabble.Tests
 
       CollectionAssert.AreEqual(expectedList, resultList);
     }
+  
+    [TestMethod]
+    public void ReturnWordsList_ReturnsMultipleItemsInList_ScrabbleList()
+    {
+      //Arrange
+      string userWordOne = "Elbow";
+      string userWordTwo = "Hello";
+      ScrabbleLetter testScrabbleOne = new ScrabbleLetter(userWordOne);
+      ScrabbleLetter testScrabbleTwo = new ScrabbleLetter(userWordTwo);
+      List<ScrabbleLetter> expectedList = new List<ScrabbleLetter> {testScrabbleOne, testScrabbleTwo};
+
+      // Act
+      List<ScrabbleLetter> resultList = ScrabbleLetter.ReturnWordsList();
+
+      //Assert
+
+      CollectionAssert.AreEqual(expectedList, resultList);
+    }
   }
 }
 
